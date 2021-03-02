@@ -1,0 +1,11 @@
+"TOA5","SECMOL","CR1000","E11642","CR1000.Std.31.03","CPU:HIAL_TM_1.4.CR1","62362","DataTableInfo"
+"TIMESTAMP","RECORD","DataTableName(1)","DataTableName(2)","DataTableName(3)","SkippedRecord(1)","SkippedRecord(2)","SkippedRecord(3)","DataRecordSize(1,1)","DataRecordSize(1,2)","DataRecordSize(2,1)","DataRecordSize(2,2)","DataRecordSize(3,1)","DataRecordSize(3,2)","SecsPerRecord(1)","SecsPerRecord(2)","SecsPerRecord(3)","DataFillDays(1,1)","DataFillDays(1,2)","DataFillDays(2,1)","DataFillDays(2,2)","DataFillDays(3,1)","DataFillDays(3,2)"
+"TS","RN","","","","","","","records","records","records","records","records","records","","","","days","days","days","days","days","days"
+"","","","","","","","","","","","","","","","","","","","","","",""
+"2020-12-13 17:06:07.03",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2020-12-21 15:16:44.5",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2020-12-29 14:28:20.71",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2020-12-29 14:28:43.45",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2021-02-11 15:08:00.57",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2021-02-22 13:23:47.11",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
+"2021-02-22 13:24:03.56",0,"Table15min","Table60Min","Table24hr",0,0,0,194001,0,48500,0,2020,0,900,3600,86400,2020.844,0,2020.833,0,2020,0
