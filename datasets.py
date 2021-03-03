@@ -9,6 +9,41 @@ import time
 from tqdm import tqdm
 import os
 
+
+def plot(df):
+
+    filename = "outputs/" + site + "_input_field.pdf"
+    pp = PdfPages(filename)
+    fig, (ax1, ax2, ax3) = plt.subplots(
+        nrows=3, ncols=1, sharex="col", sharey="row", figsize=(16, 14)
+    )
+
+    x = df.index
+
+    y1 = df.T_a
+    ax1.plot(x, y1, "k-", linewidth=0.5)
+    ax1.set_ylabel("Temperature [$\\degree C$]")
+    ax1.grid()
+
+    y2 = df.RH
+    ax2.plot(x, y2, "k-", linewidth=0.5)
+    ax2.set_ylabel("Humidity [$\\%$]")
+    ax2.grid()
+
+    y3 = df.v_a
+    ax3.plot(x, y3, "k-", linewidth=0.5)
+    ax3.set_ylabel("Wind [$m\\,s^{-1}$]")
+    ax3.grid()
+
+    ax1.xaxis.set_major_locator(mdates.WeekdayLocator())
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
+    ax1.xaxis.set_minor_locator(mdates.DayLocator())
+    fig.autofmt_xdate()
+    pp.savefig(bbox_inches="tight")
+    pp.close()
+    plt.clf()
+
+
 if __name__ == "__main__":
     locations = ["HIAL", "Gangles", "SECMOL"]
     for site in locations:
@@ -53,6 +88,7 @@ if __name__ == "__main__":
             print(df_in.head())
             print(df_in.tail())
             df_in.to_csv("outputs/" + site + "_input_field.csv")
+
         if site == "Gangles":
             col_list = [
                 "TIMESTAMP",
@@ -179,3 +215,4 @@ if __name__ == "__main__":
             print(df_in.tail())
 
             df_in.to_csv("outputs/" + site + "_input_field.csv")
+        plot(df_in)
