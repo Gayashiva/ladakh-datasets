@@ -1,0 +1,16 @@
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Lamsu	497.162	-1.88309	0.172126	488.782	1.43776	486.899	1.60988
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Kullum	616.405	-2.3082	0.326183	518.134	2.95805	515.825	3.28424
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Karith	1068.73	-23.8373	0.705768	1590.58	4.0594	1566.74	4.76517
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Apati	426.762	-0.958063	0.129418	427.247	2.01799	426.289	2.14741
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Alchi	338.151	-2.44572	0.124064	232.741	0.833139	230.295	0.957203
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Takmachik	1134.75	-3.61034	0.407543	1958.82	5.33496	1955.21	5.7425
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Gangles	675.173	-0.966734	0.0931386	739.486	2.98365	738.519	3.07679
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Phaterak	678.394	-1.85716	0.165218	921.836	2.94934	919.979	3.11455

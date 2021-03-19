@@ -11,8 +11,8 @@ import os
 if __name__ == "__main__":
     df = pd.read_csv(
         # "data/flowmeter/" + "2feb_9feb.csv",
-        # "data/flowmeter/" + "18thdec_9thfeb.csv",
-        "data/flowmeter/" + "all_18_12.csv",
+        "data/flowmeter/" + "18thdec_9thfeb.csv",
+        # "data/flowmeter/" + "all_18_12.csv",
         sep=";",
         # skiprows=[0, 2, 3],
         parse_dates=["Time"],
