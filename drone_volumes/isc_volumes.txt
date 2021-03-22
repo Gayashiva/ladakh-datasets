@@ -14,3 +14,5 @@ Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume 
 Gangles	675.173	-0.966734	0.0931386	739.486	2.98365	738.519	3.07679
 Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
 Phaterak	678.394	-1.85716	0.165218	921.836	2.94934	919.979	3.11455
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Tarchit	1699.1	-5.49995	0.36744	3656.53	11.6793	3651.03	12.0467

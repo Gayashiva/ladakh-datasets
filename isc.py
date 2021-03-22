@@ -53,7 +53,9 @@ if __name__ == "__main__":
     df = df.set_index("Name")
     df2[cols2[9:]] = df[cols[2:]]
     df2["Area"] = df["Area"]
-    df2 = df2.drop(columns=["2D Length Error", "3D Length Error", "2D Area Error"])
+    df2 = df2.drop(
+        columns=["2D Length Error", "3D Length Error", "2D Area Error", "FillV", "CutV"]
+    )
     df2 = df2.reset_index()
     df = df2.sort_values(by=["TotalV"], ascending=False, ignore_index=True)
     df["TotalV"] = df["TotalV"].round(2)
@@ -63,9 +65,12 @@ if __name__ == "__main__":
     # cols = [c for c in df.columns if c.lower() != "error"]
     # df = df[cols]
     df = df[df.columns.drop(list(df.filter(regex="Error")))]
+    df = df[df.columns.drop(list(df.filter(regex="2D")))]
     df["NewV"] = df["3D Area"] * 1.5 + df["TotalV"]
+    df["dia"] = df["3D Length"] / 3.14
     df["NewV"] = df["NewV"].round(2)
     print(df.head(10))
     df2 = df[["Name", "TotalV", "NewV"]]
     df2.to_csv("outputs/" + "isc_results.csv")
+    df.to_csv("outputs/" + "isc.csv")
     print(df2.head(10))
