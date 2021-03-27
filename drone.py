@@ -55,8 +55,7 @@ if __name__ == "__main__":
         )
         df1 = df1.iloc[::2]
         df1["When"] = pd.to_datetime(df1["When"], format="%b_%d_%y")
-        logger.info(df1.When.head())
-        df1 = df1.drop(columns=["FillVError", "CutVError", "TotalVError"])
+        df1 = df1[df1.columns.drop(list(df1.filter(regex="Error")))]
         df1 = df1.set_index("When").sort_index()
         df1 = df1.astype(float)
 
@@ -79,7 +78,7 @@ if __name__ == "__main__":
                 "FillVError",
                 "CutV",
                 "CutVError",
-                "TotalV",
+                "DroneV",
                 "TotalVError",
             ],
         )
@@ -88,6 +87,7 @@ if __name__ == "__main__":
         df2 = df2.drop(columns=["Name"])
         df2 = df2[df2.columns.drop(list(df2.filter(regex="Error")))]
         df2 = df2[df2.columns.drop(list(df2.filter(regex="2D")))]
+        # df2["When"] = df2["When"] + pd.Timedelta(hours=14)
         df2 = df2.set_index("When").sort_index()
         df2 = df2.astype(float)
         cols2 = df2.columns
@@ -98,6 +98,12 @@ if __name__ == "__main__":
         df["dia"] = df2["3D Length"] / 3.14
         df = df.round(2)
         df.to_csv("outputs/" + site + "_drone.csv")
+        df = df[["DroneV", "dia"]]
+        df.index = df.index + pd.Timedelta(hours=16)
+        print(df.head())
+        df.to_csv(
+            "/home/suryab/work/air_model/data/guttannen/interim/" + site + "_drone.csv"
+        )
         # df2[cols2[1:]] = df2[cols2[1:]].apply(pd.to_numeric, errors="coerce")
         # logger.warning(df2.head())
 
