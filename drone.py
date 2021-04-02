@@ -35,7 +35,7 @@ def quad_eqn(a, b, c):
 
 if __name__ == "__main__":
     # locations = ["gangles", "guttannen", "kullum"]
-    locations = ["guttannen"]
+    locations = ["guttannen20", "guttannen21"]
     for site in locations:
         logger.info(site)
         df1 = pd.read_csv(
@@ -78,7 +78,7 @@ if __name__ == "__main__":
                 "FillVError",
                 "CutV",
                 "CutVError",
-                "DroneV",
+                "TotalV",
                 "TotalVError",
             ],
         )
@@ -98,11 +98,22 @@ if __name__ == "__main__":
         df["dia"] = df2["3D Length"] / 3.14
         df = df.round(2)
         df.to_csv("outputs/" + site + "_drone.csv")
+        df["DroneV"] = df["CutV"]
         df = df[["DroneV", "dia"]]
-        df.index = df.index + pd.Timedelta(hours=16)
+        df.index += pd.Timedelta(hours=16)
+        if site == "guttannen20":
+            # Hollow Volume remains
+            df.loc[datetime(2020, 4, 6), ["DroneV", "dia"]] = df.loc[datetime(2020, 1, 3, 16), ["DroneV", "dia"]]
+            df = df.reset_index()
+            # df.loc[df.index ==datetime(2020, 1, 3, 16), 'When'] += pd.Timedelta(days=7)
+            df = df.set_index('When')
         print(df.head())
         df.to_csv(
-            "/home/suryab/work/air_model/data/guttannen/interim/" + site + "_drone.csv"
+            "/home/suryab/work/air_model/data/"
+            + site
+            + "/interim/"
+            + site
+            + "_drone.csv"
         )
         # df2[cols2[1:]] = df2[cols2[1:]].apply(pd.to_numeric, errors="coerce")
         # logger.warning(df2.head())

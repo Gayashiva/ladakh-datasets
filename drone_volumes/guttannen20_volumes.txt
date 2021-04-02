@@ -1,0 +1,6 @@
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Jan_3_20	170.044	-6.30029	0.469997	23.9087	0.700617	17.6084	1.17061
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+jan_24_20	231.083	-1.734	0.0812851	57.8062	0.38595	56.0722	0.467235
+Name	Terrain 3D Area  (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Feb_15_20	404.295	-2.01245	0.0870383	114.277	0.821206	112.265	0.908244
