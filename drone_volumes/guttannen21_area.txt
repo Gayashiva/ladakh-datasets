@@ -1,11 +1,15 @@
 Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
-Nov_22_20	28.2195		28.3838		59.5923		60.2259									
+Mar_6_21	47.0186		47.1875		160.4		161.238									
 Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
-Dec_2_20	30.6342		30.7554		69.7821		70.3494									
+Dec_30_20	47.092		47.2079		157.799		158.52									
 Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
-Dec_30_20	40.9567		41.2009		117.58		118.982									
+Jan_9_21	47.57		47.6999		168.165		168.919									
 Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
-Jan_9_21	41.5916		41.7071		126.904		127.534									
+Dec_2_20	35.7161		35.9376		93.9726		95.0508									
 Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
-Mar_6_21	39.3509		39.5392		111.035		112.009									
+Nov_22_20	33.9028		34.1551		83.9272		85.1131									
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Apr_2_21	40.866		41.2079		120.318		121.679									
+
+
 

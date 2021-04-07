@@ -10,8 +10,9 @@ import os
 
 if __name__ == "__main__":
     df = pd.read_csv(
+        "data/flowmeter/" + "9feb_23mar.csv",
         # "data/flowmeter/" + "2feb_9feb.csv",
-        "data/flowmeter/" + "18thdec_9thfeb.csv",
+        # "data/flowmeter/" + "18thdec_9thfeb.csv",
         # "data/flowmeter/" + "all_18_12.csv",
         sep=";",
         # skiprows=[0, 2, 3],
@@ -30,7 +31,7 @@ if __name__ == "__main__":
         df["Min volume flow rate, m³/h"], downcast="float"
     )
     df["Discharge"] = (
-        df["Min volume flow rate, m³/h"] + df["Max volume flow rate, m³/h"] / 2
+        (df["Min volume flow rate, m³/h"] + df["Max volume flow rate, m³/h"]) / 2
     )
     col_list = [
         "Time",

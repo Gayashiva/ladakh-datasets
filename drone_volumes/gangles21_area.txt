@@ -1,0 +1,11 @@
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Feb_27_21	57.272		58.1333		224.702		231.311									
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Jan_18_21	36.1563		36.7966		76.8017		78.8724									
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Mar_3_21	50.1877		52.0752		177.232		189.145									
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Mar_15_21	53.1265		54.4711		199.159		207.319									
+Name	Projected 2D Length  (m)	Projected 2D Length  Error (m)	Terrain 3D Length  (m)	Terrain 3D Length  Error (m)	Projected 2D area  (m2)	Projected 2D area  Error (m2)	Enclosed 3D Area  (m2)	Enclosed 3D Area  Error (m2)	Terrain 3D Area  (m2)	Terrain 3D Area  Error (m2)	Fill Volume  (m3)	Fill Volume  Error (m3)	Cut Volume  (m3)	Cut Volume  Error (m3)	Total Volume  (m3)	Total Volume  Error (m3)
+Mar_26_21	55.4185		56.6237		208.478		217.537									
+

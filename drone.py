@@ -35,7 +35,7 @@ def quad_eqn(a, b, c):
 
 if __name__ == "__main__":
     # locations = ["gangles", "guttannen", "kullum"]
-    locations = ["guttannen20", "guttannen21"]
+    locations = ["guttannen20", "guttannen21", "gangles21"]
     for site in locations:
         logger.info(site)
         df1 = pd.read_csv(
@@ -95,7 +95,7 @@ if __name__ == "__main__":
         df2[cols2[2:]] = df1[cols[1:]]
         df = df2
         df["Area"] = df1["Area"]
-        df["dia"] = df2["3D Length"] / 3.14
+        df["dia"] = df2["3D Length"] / math.pi
         df = df.round(2)
         df.to_csv("outputs/" + site + "_drone.csv")
         df["DroneV"] = df["CutV"]
@@ -115,34 +115,3 @@ if __name__ == "__main__":
             + site
             + "_drone.csv"
         )
-        # df2[cols2[1:]] = df2[cols2[1:]].apply(pd.to_numeric, errors="coerce")
-        # logger.warning(df2.head())
-
-        # df1["Height"] = 5
-        # df["dia"] = 0
-        # df = df.reset_index()
-        # if site == "kullum":
-        #     heights = [4, 11, 12, 12, 14]
-        #     # areas = [173, 501, 619, 619, 586]
-        #     areas = [197, 606, 707, 707, 641]
-        #     for i in range(df.shape[0] - 1):
-        #         df.loc[i, "Height"] = heights[i]
-        #         df.loc[i, "Area"] = areas[i]
-        # if site == "gangles":
-        #     heights = [8, 13]
-        #     areas = [194, 771]
-        #     for i in range(len(heights)):
-        #         df.loc[i, "Height"] = heights[i]
-        #         df.loc[i, "Area"] = areas[i]
-        # if site == "guttannen":
-        #     heights = [0.1, 1, 2.4, 4, 2.7]
-        #     for i in range(len(heights)):
-        #         df.loc[i, "Height"] = heights[i]
-
-        # for i in range(df.shape[0]):
-        #     k = (df.Area[i] / 3.14) ** 2 * -1
-        #     sol = quad_eqn(a=1, b=df.Height[i], c=k)
-        #     df.loc[i, "dia"] = 2 * np.sqrt(sol)
-
-        # df["V"] = 1 / 3 * 3.14 * df.dia ** 2 / 4 * df.Height
-        # print(df.head())
