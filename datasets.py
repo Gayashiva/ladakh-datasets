@@ -330,7 +330,7 @@ if __name__ == "__main__":
             mask_index = df[mask].index
             df.loc[mask_index, 'SW_direct'] = 0
             df["Prec"] = 0
-            df["missing"] = 0
+            df["missing_type"] ='-'
             df["cld"] = 0
             site = "gangles21"
             df.to_csv(
