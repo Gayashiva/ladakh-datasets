@@ -35,10 +35,10 @@ def quad_eqn(a, b, c):
 
 if __name__ == "__main__":
     # locations = ["gangles", "guttannen", "kullum"]
-    # locations = ["guttannen20", "guttannen21", "gangles21"]
+    locations = ["guttannen20", "guttannen21", "gangles21", "diavolezza21"]
     # locations = ["diavolezza21"]
-    # locations = ["guttannen21"]
-    locations = ["gangles21"]
+    # locations = ["guttannen20"]
+    # locations = ["gangles21"]
     for site in locations:
         logger.info(site)
         df1 = pd.read_csv(
@@ -91,7 +91,7 @@ if __name__ == "__main__":
         df2 = df2.drop(columns=["Name"])
         print(df2.head())
         df2 = df2[df2.columns.drop(list(df2.filter(regex="Error")))]
-        df2 = df2[df2.columns.drop(list(df2.filter(regex="2D")))]
+        df2 = df2[df2.columns.drop(list(df2.filter(regex="3D")))]
         # df2["When"] = df2["When"] + pd.Timedelta(hours=14)
         df2 = df2.set_index("When").sort_index()
         df2 = df2.astype(float)
@@ -102,15 +102,15 @@ if __name__ == "__main__":
         df2[cols2[2:]] = df1[cols[1:]]
         df = df2
         df["Area"] = df1["Area"]
-        df["dia"] = df2["3D Length"] / math.pi
+        df["rad"] = df2["2D Length"] / (math.pi * 2)
         df = df.round(2)
         df.to_csv("outputs/" + site + "_drone.csv")
         df["DroneV"] = df["CutV"]
-        df = df[["DroneV", "dia"]]
+        df = df[["DroneV", "rad"]]
         df.index += pd.Timedelta(hours=16)
         if site == "guttannen20":
             # Hollow Volume remains
-            df.loc[datetime(2020, 4, 6), ["DroneV", "dia"]] = df.loc[datetime(2020, 1, 3, 16), ["DroneV", "dia"]]
+            df.loc[datetime(2020, 4, 6), ["DroneV", "rad"]] = df.loc[datetime(2020, 1, 3, 16), ["DroneV", "rad"]]
         if site == "guttannen21":
             # Hollow Volume remains
             df = df.reset_index()
@@ -120,7 +120,7 @@ if __name__ == "__main__":
         #     df = df.reset_index()
         #     # Remove volume of first icestupa and remove the first point
         #     df.loc[:, "DroneV"] -= df.loc[0, "DroneV"]
-        #     df.loc[0, ["DroneV", "dia"]]=[np.nan,np.nan]
+        #     df.loc[0, ["DroneV", "rad"]]=[np.nan,np.nan]
         #     df = df.set_index("When")
         print(df.tail(10))
         df.to_csv(
