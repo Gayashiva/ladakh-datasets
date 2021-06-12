@@ -114,7 +114,7 @@ if __name__ == "__main__":
         if site == "guttannen21":
             # Hollow Volume remains
             df = df.reset_index()
-            df.loc[len(df)]=[datetime(2021, 5, 13), df.DroneV[0],np.nan]
+            df.loc[len(df)]=[datetime(2021, 5, 10), df.DroneV[0],np.nan]
             df = df.set_index("When")
         # if site == "gangles21":
         #     df = df.reset_index()

@@ -94,7 +94,8 @@ if __name__ == "__main__":
         logger=logger,
     )
     # locations = ["HIAL", "Gangles", "SECMOL"]
-    locations = ["Gangles", "SECMOL"]
+    # locations = ["Gangles", "SECMOL"]
+    locations = ["Gangles", "HIAL"]
     for site in locations:
         if site == "SECMOL":
             col_list = [
@@ -446,4 +447,4 @@ if __name__ == "__main__":
             mask = df_in["When"] >= start_date
             df_in = df_in.loc[mask]
             df_in = df_in.reset_index(drop=True)
-            df_in.to_csv("outputs/" + site + "_input_field.csv")
+            df_in.to_csv("outputs/" + site + "_input_field.csv", index=False)
