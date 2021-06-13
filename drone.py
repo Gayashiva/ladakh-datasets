@@ -58,7 +58,8 @@ if __name__ == "__main__":
         )
         df1 = df1.iloc[::2]
         df1["When"] = pd.to_datetime(df1["When"], format="%b_%d_%y")
-        df1 = df1[df1.columns.drop(list(df1.filter(regex="Error")))]
+        df1 = df1[df1.columns.drop(list(df1.filter(regex="Fill")))]
+        df1 = df1[df1.columns.drop(list(df1.filter(regex="Total")))]
         df1 = df1.set_index("When").sort_index()
         df1 = df1.astype(float)
         df1 = df1.resample('d').mean().dropna(how='all')
@@ -90,7 +91,8 @@ if __name__ == "__main__":
         df2["When"] = pd.to_datetime(df2["Name"], format="%b_%d_%y")
         df2 = df2.drop(columns=["Name"])
         print(df2.head())
-        df2 = df2[df2.columns.drop(list(df2.filter(regex="Error")))]
+        df2 = df2[df2.columns.drop(list(df2.filter(regex="Total")))]
+        df2 = df2[df2.columns.drop(list(df2.filter(regex="Fill")))]
         df2 = df2[df2.columns.drop(list(df2.filter(regex="3D")))]
         # df2["When"] = df2["When"] + pd.Timedelta(hours=14)
         df2 = df2.set_index("When").sort_index()
@@ -98,23 +100,24 @@ if __name__ == "__main__":
         df2 = df2.resample('d').mean().dropna(how='all')
         cols2 = df2.columns
         cols = df1.columns
-        print(cols2[2:], cols[1:])
-        df2[cols2[2:]] = df1[cols[1:]]
+        print(cols2[4:], cols[1:])
+        df2[cols2[4:]] = df1[cols[1:]]
         df = df2
         df["Area"] = df1["Area"]
         df["rad"] = df2["2D Length"] / (math.pi * 2)
         df = df.round(2)
         df.to_csv("outputs/" + site + "_drone.csv")
         df["DroneV"] = df["CutV"]
-        df = df[["DroneV", "rad"]]
+        df["DroneVError"] = df["CutVError"]
+        df = df[["DroneV", "DroneVError", "rad"]]
         df.index += pd.Timedelta(hours=16)
         if site == "guttannen20":
             # Hollow Volume remains
-            df.loc[datetime(2020, 4, 6), ["DroneV", "rad"]] = df.loc[datetime(2020, 1, 3, 16), ["DroneV", "rad"]]
+            df.loc[datetime(2020, 4, 6), ["DroneV", "DroneVError", "rad"]] = df.loc[datetime(2020, 1, 3, 16), ["DroneV", "DroneVError", "rad"]]
         if site == "guttannen21":
             # Hollow Volume remains
             df = df.reset_index()
-            df.loc[len(df)]=[datetime(2021, 5, 10), df.DroneV[0],np.nan]
+            df.loc[len(df)]=[datetime(2021, 5, 10), df.DroneV[0],0,np.nan]
             df = df.set_index("When")
         # if site == "gangles21":
         #     df = df.reset_index()
